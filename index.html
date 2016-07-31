@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#teilnehmende">Unterstützende</a>
+                        <a class="page-scroll" href="#teilnehmende">Erstunterstützende</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#kontakt">Kontakt</a>
@@ -81,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Unterstützende</h2>
+                    <h2 class="section-heading">Erstunterstützende</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -158,6 +158,53 @@
                     <hr class="light">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="text-faded">Sie unterstützen ein vielfältiges Celle? Nehmen Sie doch teil an der Kampage Celle - Vielfalt verbindet, indem Sie über das folgende Formular ein
+                        kurzes Statement mit einem optionalen Bild versenden, was wir auf dieser Webseite zeigen können. Wir freuen uns über Ihre Unterstützung!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sendcontact" id="contact" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name:*</label>
+                                <input type="text" class="form-control" placeholder="Mein Name..." id="name" required data-validation-required-message="Bitte geben Sie Ihren Namen an, mit dem Sie für die Celle - Vielfalt verbindet">
+                                <p class="text-muted"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email-Adresse:*</label>
+                                <input type="email" class="form-control" placeholder="Meine Email-Adresse..." id="email" required data-validation-required-message="Bitte geben Sie eine Email-Adresse an, unter der wir Sie kontaktieren können.">
+                                <p class="text-muted"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Bild:</label>
+                                <input type="file" class="form-control" placeholder="Mein Bild..." id="image">
+                                <p class="text-muted"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Statement:*</label>
+                                <textarea rows="5" class="form-control" placeholder="Mein Statement..." id="message" required data-validation-required-message="Bitte geben Sie ein Statement zu Celle - Vielfalt verbindet an."></textarea>
+                                <p class="text-muted"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button id="btnSubmit" type="submit" class="page-scroll btn btn-default btn-xl sr-button">Abschicken</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -195,6 +242,8 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
