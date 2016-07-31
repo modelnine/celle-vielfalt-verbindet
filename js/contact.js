@@ -10,13 +10,10 @@ $(function() {
             $.ajax({
                 url: "contact.php",
                 type: "POST",
-                data: {
-                    name: $("input#name").val(),
-                    email: $("input#email").val(),
-                    image: $("input#image").val(),
-                    message: $("textarea#message").val()
-                },
+                data: new FormData($form[0]),
                 cache: false,
+                contentType: false,
+                processData: false,
                 success: function() {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
