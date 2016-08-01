@@ -155,6 +155,9 @@ header {
   min-height: auto;
   text-align: center;
   background-color: #016699;
+  background-image: url(../img/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
 }
 header .header-content {
