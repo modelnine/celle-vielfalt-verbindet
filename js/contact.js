@@ -8,7 +8,7 @@ $(function() {
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
             $.ajax({
-                url: "contact.php",
+                url: "/contact.php",
                 type: "POST",
                 data: new FormData($form[0]),
                 cache: false,
