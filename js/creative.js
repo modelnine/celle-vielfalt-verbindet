@@ -1,5 +1,19 @@
 (function($) {
     "use strict"; // Start of use strict
+    
+    $.fn.randomize = function(childElem) {
+    	  return this.each(function() {
+    	      var $this = $(this);
+    	      var elems = $this.children(childElem);
+
+    	      elems.sort(function() { return (Math.round(Math.random())-0.5); });  
+
+    	      $this.remove(childElem);  
+
+    	      for(var i=0; i < elems.length; i++)
+    	        $this.append(elems[i]);      
+
+    })};
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -40,5 +54,11 @@
         scale: 0.3,
         distance: '0px'
     }, 300);
+    
+    $('.carousel .carousel-inner').randomize('div.item');
+    $('.carousel div.item:first').addClass('active');
+    $('.carousel').carousel({
+        interval: 10000
+    });
 
 })(jQuery); // End of use strict
